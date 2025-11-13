@@ -60,8 +60,6 @@ jobs:
           TOTAL_CHANGES: ${{ steps.get-diff.outputs.total_changes }}
         with:
           script: |
-            const fetch = require('node-fetch');
-
             const pr = context.payload.pull_request;
             const prTitle = pr.title;
             const prBody = pr.body || 'No description provided';
